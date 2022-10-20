@@ -4,22 +4,67 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>409401186-lab2</title>
+    <title>409401186-lab4</title>
     <link rel="icon" href="IMG_8420.JPG">
     <link rel="stylesheet" href="./bootstrap-5.0.1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="test.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="card">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script> 
+    $(document).ready(function(){
+        $("#flip").click(function(){
+            $("#flipSec").fadeIn("slow");
+            $("#panel").slideDown("slow");
+            $("a").addClass("important");
+            $("#viewImg").fadeIn("3000");
+        });
+        
+    });
+    </script>
+    <style>
+        #panel, #flipSec{
+            height: 20px;
+            display: none;
+            font-size: 20px;
+            color: rgb(231, 104, 0);
+        }
+        #flipSec{
+            color: red;
+        }
+        #viewImg{
+            width: 30px;
+            display: none;
+            margin-top: 5px;
+            margin-right: 10px;
+        }
+        #style1{
+            display: flex;
+            flex-direction: row;
+            line-height: 30px;
+        }
+    </style>
+    <div class="card" id="flip">
             <img class="card-img" src="./IMG_8420.JPG" alt="img">
         <div class="card-body">
             <h1 class="card-title" style="margin-left: 20px">邱柏儒</h1>
             <div class="card-text" style="width: 500px; margin-left: 20px; line-height: 30px;">
                 <i class="fas fa-running"></i> locking
-                &nbsp;<i class="fas fa-sign-language"></i> sign-language
-                <br/><i class="far fa-eye" style="font-size: 11px"></i> YT-channel：
+                &nbsp;
+                <i class="fas fa-sign-language"></i> sign-language
+                <br/>
+                <i class="far fa-eye" style="font-size: 11px"></i> YT-channel：
                 <a href="https://www.youtube.com/channel/UCffBPFMZ7RuvJf3FFDVl1cg" target="_blank">我就用力笑</a>
+                <div id="style1">
+                    <img id="viewImg" src="./youtube.png">
+                    <div id="flipSec">
+                        Please subscribe！
+                   </div>
+                    <div id="panel">
+                        Press the bell！
+                    </div>
+                </div>
             </div>
         </div>
     </div>
